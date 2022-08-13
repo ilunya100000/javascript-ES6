@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript ES6</title>
+</head>
+<body>
+    <h1 style="text-align: center;">lesson 171 function №16</h1>
+    <script>
+
+let obj = {
+            num1: {
+                1: 'odin',
+                2: 'dva',
+                3: 'tri',
+                4: '4eture',
+                5: 'p9tb',
+                6: 'shectb',
+                10: 'des9tb',
+            },
+
+            num2: {
+                11: 'oddinadLIatb',
+                12: 'dvenadLIatb',
+                13: 'trinadLIatb',
+                14: '4eturnadLIatb',
+                15: 'p9tnadLIatb',
+                16: 'shestnadLIatb',
+            },
+
+            num3: {
+                100: 'sto',
+                200: 'dvesti',
+                300: 'trista',
+                400: '4eturesta',
+                500: 'p9tsot',
+                600: 'shestsot',
+            },
+        }
+
+function ex(num) {
+    
+    let numStr = String(num);
+
+    if(numStr.length == 1) {
+        // console.log('1')
+
+        for (let key in obj){
+            
+            console.log(key)
+            const values = Object.values(obj[key]);
+                values.forEach(value => {
+                // console.log(value);
+            });
+
+            for (let key1 in obj[key]){
+               
+                if(key1 == num){
+                    // console.log(key1.value)
+                    console.log(values[key1-1])
+                    return key1
+                }
+            }
+        }
+    }
+    if(numStr.length == 2) {
+        console.log('2')
+        for (let key in obj){
+            
+            console.log(key)
+            const values = Object.values(obj[key]);
+                values.forEach(value => {
+                // console.log(value);
+            });
+
+            for (let key1 in obj[key]){
+               
+                if(key1 == num){
+                    // console.log(key1.value)
+                    console.log(values[key1-1])
+                    return key1
+                }
+            }
+        }
+    }
+    if(numStr.length == 3) {
+        console.log('3')
+    }
+    
+    // console.log(num)
+    return num
+}
+
+ex(11)
+    </script>
+</body>
+</html>
