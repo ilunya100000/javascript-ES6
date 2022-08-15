@@ -18,6 +18,9 @@ let obj = {
                 4: '4eture',
                 5: 'p9tb',
                 6: 'shectb',
+                7: 'cemb',
+                8: 'vosemb',
+                9: 'dev9tb',
                 10: 'des9tb',
             },
 
@@ -44,46 +47,41 @@ function ex(num) {
     
     let numStr = String(num);
 
-    if(numStr.length == 1) {
-        // console.log('1')
+    // if(numStr.length == 1) {
+    //     // console.log('1')
 
-        for (let key in obj){
+    //     for (let key in obj){
             
-            console.log(key)
-            const values = Object.values(obj[key]);
-                values.forEach(value => {
-                // console.log(value);
-            });
+    //         console.log(key)
+    //         const values = Object.values(obj[key]);
+    //             values.forEach(value => {
+    //             // console.log(value);
+    //         });
 
-            for (let key1 in obj[key]){
+    //         for (let key1 in obj[key]){
                
-                if(key1 == num){
-                    // console.log(key1.value)
-                    console.log(values[key1-1])
-                    return key1
-                }
-            }
-        }
-    }
+    //             if(key1 == num){
+    //                 // console.log(key1.value)
+    //                 console.log(values[key1-1])
+    //                 return key1
+    //             }
+    //         }
+    //     }
+    // }
     if(numStr.length == 2) {
-        console.log('2')
-        for (let key in obj){
-            
-            console.log(key)
-            const values = Object.values(obj[key]);
-                values.forEach(value => {
-                // console.log(value);
+        // console.log('2')
+        for (let key in obj.num2){
+            const values = Object.values(obj.num2);
+            values.forEach(value => {
+                console.log(value);
+             
             });
-
-            for (let key1 in obj[key]){
-               
-                if(key1 == num){
-                    // console.log(key1.value)
-                    console.log(values[key1-1])
-                    return key1
-                }
+            if (values[key] == num){
+                // console.log(key1.value)
+                // console.log(values.key1)
+                console.log(values[key])
+                return key
             }
-        }
     }
     if(numStr.length == 3) {
         console.log('3')
@@ -91,9 +89,9 @@ function ex(num) {
     
     // console.log(num)
     return num
-}
+}}
 
-ex(11)
+ex(14)
     </script>
 </body>
 </html>
